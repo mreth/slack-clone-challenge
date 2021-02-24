@@ -4,6 +4,7 @@ import AddCircleOutlineIcon from '@material-ui/icons/AddCircleOutline';
 import {sidebarItemsData} from '../data/SidebarData'
 import {channelItems} from '../data/ChannelsData'
 import AddIcon from '@material-ui/icons/Add';
+import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 
 function Sidebar() {
     return (
@@ -11,6 +12,7 @@ function Sidebar() {
             <WorkspaceContainer>
                 <Name>
                     Ken Mullet
+                    <ExpandMoreIcon/>
                 </Name>
                 <NewMessage>
                     <AddCircleOutlineIcon/>
@@ -53,7 +55,7 @@ function Sidebar() {
 export default Sidebar
 
 const Container = styled.div`
-    background: #3f0e40;
+    background: #212121;
 `
 
 const WorkspaceContainer = styled.div`
@@ -64,12 +66,15 @@ const WorkspaceContainer = styled.div`
     padding-left: 19px;
     justify-content: space-between;
     border-bottom: 1px solid #532753;
+    background: #3f0e40;
     :hover{
         background: #350D36
     }
 `
 
 const Name = styled.div`
+    display: flex;
+    align-items: center;
     cursor: pointer;
 `
 

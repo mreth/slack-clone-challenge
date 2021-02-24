@@ -37,7 +37,7 @@ function Chat() {
 export default Chat
 
 const Container = styled.div`
-
+    background: #4f4f4f;
 `
 
 const Header = styled.div`
@@ -45,14 +45,16 @@ const Header = styled.div`
     justify-content: space-between;
     align-items: center;
     height: 64px;
-    border-bottom: 1px solid lightgray;
+    border-bottom: 1px solid #646464;
     padding: 0px 16px 0px 20px;
     font-weight: 700;
     font-size: 13px;
+    color: #b5b5b5;
+    background: #202124;
 `
 
 const Main = styled.div`
-
+    
 `
 
 const Channel = styled.div`
@@ -79,7 +81,6 @@ const Members = styled.div`
 const UserImage = styled.div`
     width: 28px;
     height: 28px;
-    border: 2px solid white;
 
     img{
         width: 100%;
