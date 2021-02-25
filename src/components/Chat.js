@@ -3,21 +3,23 @@ import styled from 'styled-components'
 import PersonAddIcon from '@material-ui/icons/PersonAdd';
 import InfoOutlinedIcon from '@material-ui/icons/InfoOutlined';
 import StarOutlineIcon from '@material-ui/icons/StarOutline';
+import ChatInput from './ChatInput'
+import ChatMessage from './ChatMessage'
 
 function Chat() {
     return (
         <Container>
             <Header>
-                <Main>
-                    <Channel>
-                        # testchannel
+                <Channel>
+                    <ChannelName>
+                        #react-challenge
                         <StarOutlineIcon transform="scale(.75)"/>
-                    </Channel>
-                    <Topic>
+                    </ChannelName>
+                    <ChannelInfo>
                         Add a topic
-                    </Topic>          
-                </Main>
-                <Icons>
+                    </ChannelInfo>          
+                </Channel>
+                <ChannelDetails>
                     <Members>             
                         <UserImage>
                             <img src="https://i.imgur.com/6VBx3io.png"/>
@@ -28,8 +30,12 @@ function Chat() {
                     </Members>
                     <PersonAddIcon/>
                     <InfoOutlinedIcon/>                
-                </Icons>
+                </ChannelDetails>
             </Header>
+            <MessageContainer>
+                <ChatMessage/>
+            </MessageContainer>
+            <ChatInput/>
         </Container>
     )
 }
@@ -37,36 +43,37 @@ function Chat() {
 export default Chat
 
 const Container = styled.div`
-    background: #4f4f4f;
+    display: grid;
+    grid-template-rows: 64px auto min-content;
+    background: rgb(50,50,50);
 `
 
 const Header = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 64px;
     border-bottom: 1px solid #646464;
-    padding: 0px 16px 0px 20px;
-    font-weight: 700;
-    font-size: 13px;
+    padding: 0px 20px 0px 20px;
     color: #b5b5b5;
     background: #202124;
 `
 
-const Main = styled.div`
-    
+const Channel = styled.div`
+    font-weight: 700;    
 `
 
-const Channel = styled.div`
+const ChannelName = styled.div`
     display: flex;
     align-items: center;
 `
 
-const Topic = styled.div`
+const ChannelInfo = styled.div`
     font-weight: 400;
+    font-size: 13px;
 `
 
-const Icons = styled.div`
+const ChannelDetails = styled.div`
+    font-size: 13px;
     display: flex;
     width: 140px;
     justify-content: space-between;
@@ -91,3 +98,8 @@ const UserImage = styled.div`
 const UserCount = styled.div`
     padding-left: 7px;
 `
+
+const MessageContainer = styled.div`
+
+`
+
