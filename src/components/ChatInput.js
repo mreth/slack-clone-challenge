@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import styled from 'styled-components'
 import SendIcon from '@material-ui/icons/Send'
 import FlashOnOutlinedIcon from '@material-ui/icons/FlashOnOutlined';
@@ -15,13 +15,30 @@ import InsertEmoticonIcon from '@material-ui/icons/InsertEmoticon';
 import TextFormatIcon from '@material-ui/icons/TextFormat';
 import AttachFileIcon from '@material-ui/icons/AttachFile';
 
-function ChatInput() {
+function ChatInput({ sendMessage }) {
+
+    const [input, setInput] = useState("");
+
+
+    const send = (e) => {
+        e.preventDefault();
+        if(!input) return;
+        sendMessage(input);
+        setInput("");
+    }
+
     return (
         <Container>
             <InputContainer>
                 <form>
-                    <input type="text" placeholder="Message #react-challenge"/>
-                    <SendButton>
+                    <input 
+                        onChange={(e)=>setInput(e.target.value)}
+                        type="text" 
+                        value={input}
+                        placeholder="Message here..."/>
+                    <SendButton 
+                        type="submit"
+                        onClick={send}>
                         <Send/>
                     </SendButton>
                 </form>
@@ -41,7 +58,7 @@ function ChatInput() {
                 </FormatIcons>
                 <EditorIcons>
                     <TextFormatIcon/>
-                    <img src="mention-icon.png"/>
+                    <img src="https://static.thenounproject.com/png/964445-200.png"/>
                     <InsertEmoticonIcon/>
                     <AttachFileIcon/>
                 </EditorIcons>
@@ -83,7 +100,7 @@ const InputContainer = styled.div`
     }
 `
 
-const SendButton = styled.div`
+const SendButton = styled.button`
     background: #007a5a;
     border-radius: 3px;
     width: 32px;
@@ -93,6 +110,7 @@ const SendButton = styled.div`
     justify-content: center;
     margin-right: 5px;
     cursor: pointer;
+    border: none;
 
     .MuiSvgIcon-root{
         width: 18px;
