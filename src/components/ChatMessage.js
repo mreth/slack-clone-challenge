@@ -27,14 +27,14 @@ const Container = styled.div`
     display: grid;
     grid-template-columns: 45px auto;
     align-items: center;
-    background: rgb(80,80,80);
+    background: rgb(220,220,220,0.22);
     border-bottom: 1px solid rgb(50,50,50);
     color: rgb(220,220,220);
     margin: 5px 20px 5px 20px;
     border-radius: 5px;
 
     :hover{
-        background: rgb(75,75,75);
+        background: rgb(220,220,220,0.30);
     }
 `
 

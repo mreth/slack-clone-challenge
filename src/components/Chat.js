@@ -104,7 +104,10 @@ export default Chat
 const Container = styled.div`
     display: grid;
     grid-template-rows: 64px auto min-content;
-    background: rgb(50,50,50);
+    background-color: rgb(50,50,50);
+    background-image: url("https://thumbs.dreamstime.com/t/abstract-black-purple-background-grunge-background-texture-design-elegant-antique-paint-wall-illustration-background-139830534.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
     min-height 0;
 `
 
@@ -165,5 +168,6 @@ const MessageContainer = styled.div`
     display: flex;
     flex-direction: column;
     overflow-y: scroll;
+    padding-top: 15px;
 `
 
