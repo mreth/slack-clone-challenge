@@ -45,22 +45,23 @@ function ChatInput({ sendMessage }) {
             </InputContainer>
             <EditorContainer >
                 <FormatIcons>
-                    <FlashIcon transform="scale(.75)"/>
-                    <FormatBoldIcon transform="scale(.75)"/>
-                    <FormatItalicIcon transform="scale(.75)"/>
-                    <StrikethroughSIcon transform="scale(.75)"/>
-                    <CodeIcon transform="scale(.75)"/>
-                    <LinkIcon transform="scale(.75)"/>
-                    <FormatListBulletedIcon transform="scale(.75)"/>
-                    <FormatListNumberedIcon transform="scale(.75)"/>
-                    <FormatIndentIncreaseIcon transform="scale(.75)"/>
-                    <DeveloperModeIcon transform="scale(.75)"/>
+                    <FlashIcon transform="scale(.75)" cursor="pointer"/>
+                    <FormatBoldIcon transform="scale(.75)" cursor="pointer"/>
+                    <FormatItalicIcon transform="scale(.75)" cursor="pointer"/>
+                    <StrikethroughSIcon transform="scale(.75)" cursor="pointer"/>
+                    <CodeIcon transform="scale(.75)" cursor="pointer"/>
+                    <LinkIcon transform="scale(.75)" cursor="pointer"/>
+                    <LinkIcon transform="scale(.75)" cursor="pointer"/>
+                    <FormatListBulletedIcon transform="scale(.75)" cursor="pointer"/>
+                    <FormatListNumberedIcon transform="scale(.75)" cursor="pointer"/>
+                    <FormatIndentIncreaseIcon transform="scale(.75)" cursor="pointer"/>
+                    <DeveloperModeIcon transform="scale(.75)" cursor="pointer"/>
                 </FormatIcons>
                 <EditorIcons>
-                    <TextFormatIcon transform="scale(.75)"/>
+                    <TextFormatIcon transform="scale(.75)" cursor="pointer"/>
                     <img src="https://static.thenounproject.com/png/964445-200.png"/>
-                    <InsertEmoticonIcon transform="scale(.75)"/>
-                    <AttachFileIcon transform="scale(.75)"/>
+                    <InsertEmoticonIcon transform="scale(.75)" cursor="pointer"/>
+                    <AttachFileIcon transform="scale(.75)" cursor="pointer"/>
                 </EditorIcons>
             </EditorContainer>
         </Container>
@@ -156,5 +157,6 @@ const EditorIcons = styled.div`
     img{
         width: 40px;
         height: 40px;
+        cursor: pointer;
     }
 `
