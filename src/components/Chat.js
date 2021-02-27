@@ -68,7 +68,7 @@ function Chat({user}) {
                 <ChannelDetails>
                     <Members>             
                         <UserImage>
-                            <img src="https://i.imgur.com/6VBx3io.png"/>
+                            <img src={user.photo}/>
                         </UserImage>
                         <UserCount>
                             1
@@ -148,10 +148,12 @@ const Members = styled.div`
 const UserImage = styled.div`
     width: 28px;
     height: 28px;
+    border: 2px solid white;
+    border-radius: 50%;
 
     img{
         width: 100%;
-        border-radius: 3px;
+        border-radius: 50%;
     }
 `
 

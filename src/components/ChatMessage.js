@@ -24,11 +24,14 @@ export default ChatMessage
 
 const Container = styled.div`
     padding: 8px 20px;
-    display: flex;
+    display: grid;
+    grid-template-columns: 45px auto;
     align-items: center;
     background: rgb(80,80,80);
     border-bottom: 1px solid rgb(50,50,50);
     color: rgb(220,220,220);
+    margin: 5px 20px 5px 20px;
+    border-radius: 5px;
 
     :hover{
         background: rgb(75,75,75);
@@ -38,7 +41,7 @@ const Container = styled.div`
 const UserAvatar = styled.div`
     width: 36px;
     height: 36px;
-    border-radius: 2px;
+    border-radius: 50%;
     overflow: hidden;
     margin-right: 8px;
 

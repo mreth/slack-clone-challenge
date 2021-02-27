@@ -43,24 +43,24 @@ function ChatInput({ sendMessage }) {
                     </SendButton>
                 </form>
             </InputContainer>
-            <EditorContainer>
+            <EditorContainer >
                 <FormatIcons>
-                    <FlashIcon/>
-                    <FormatBoldIcon/>
-                    <FormatItalicIcon/>
-                    <StrikethroughSIcon/>
-                    <CodeIcon/>
-                    <LinkIcon/>
-                    <FormatListBulletedIcon/>
-                    <FormatListNumberedIcon/>
-                    <FormatIndentIncreaseIcon/>
-                    <DeveloperModeIcon/>
+                    <FlashIcon transform="scale(.75)"/>
+                    <FormatBoldIcon transform="scale(.75)"/>
+                    <FormatItalicIcon transform="scale(.75)"/>
+                    <StrikethroughSIcon transform="scale(.75)"/>
+                    <CodeIcon transform="scale(.75)"/>
+                    <LinkIcon transform="scale(.75)"/>
+                    <FormatListBulletedIcon transform="scale(.75)"/>
+                    <FormatListNumberedIcon transform="scale(.75)"/>
+                    <FormatIndentIncreaseIcon transform="scale(.75)"/>
+                    <DeveloperModeIcon transform="scale(.75)"/>
                 </FormatIcons>
                 <EditorIcons>
-                    <TextFormatIcon/>
+                    <TextFormatIcon transform="scale(.75)"/>
                     <img src="https://static.thenounproject.com/png/964445-200.png"/>
-                    <InsertEmoticonIcon/>
-                    <AttachFileIcon/>
+                    <InsertEmoticonIcon transform="scale(.75)"/>
+                    <AttachFileIcon transform="scale(.75)"/>
                 </EditorIcons>
             </EditorContainer>
         </Container>

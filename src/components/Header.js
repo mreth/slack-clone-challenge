@@ -90,10 +90,11 @@ const UserImage = styled.div`
     width: 28px;
     height: 28px;
     border: 2px solid white;
-    border-radius: 3px;
+    border-radius: 50%;
     cursor: pointer;
 
     img {
         width: 100%;
+        border-radius: 50%;
     }
 `
